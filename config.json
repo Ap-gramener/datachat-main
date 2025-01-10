@@ -1,0 +1,258 @@
+{
+  "demos": [
+    {
+      "title": "World",
+      "body": "A database of 239 states and their cities.",
+      "file": "https://raw.githubusercontent.com/gramener/datasets/main/world.db",
+      "questions": [
+        "What is the total population of all cities in a specific country?",
+        "Which countries have a life expectancy greater than a certain number?",
+        "What are the official languages spoken in a specific country and their percentages?",
+        "Which cities have a population greater than a certain threshold and belong to a specific district?",
+        "What is the average surface area of countries in a specific continent?"
+      ]
+    },
+    {
+      "title": "NBA",
+      "body": "A database with information about basketball matches from the National Basketball Association. Lists Players, Teams, and matches with action counts for each player.",
+      "file": "https://raw.githubusercontent.com/gramener/datasets/main/nba.db",
+      "questions": [
+        "What is the average points scored by each player in the dataset?",
+        "Which team has the highest total rebounds in a specific game?",
+        "How many assists did each player make in games where they played more than 30 minutes?",
+        "What is the shooting percentage (field goals made/field goal attempts) for each player in the dataset?",
+        "Which player has the highest plus-minus rating in a specific game?"
+      ]
+    },
+    {
+      "title": "CraftBeer",
+      "body": "Craft beers labeled by styles and composition. A separate dataset lists breweries by state.",
+      "file": "https://raw.githubusercontent.com/gramener/datasets/main/craftbeer.db",
+      "questions": [
+        "What is the average ABV (Alcohol by Volume) of beers produced by each brewery?",
+        "Which brewery has the highest IBU (International Bitterness Units) beer, and what is the name of that beer?",
+        "List all beers that have an ABV greater than 8% and their corresponding breweries.",
+        "How many different beer styles are produced by breweries in a specific state (e.g., California)?",
+        "What are the top 5 breweries by the number of beers they produce, along with the count of their beers?"
+      ]
+    },
+    {
+      "title": "Atherosclerosis",
+      "body": "Atherosclerosis is a longitudinal 20 years lasting primary preventive study of middle-aged men.",
+      "file": "https://raw.githubusercontent.com/gramener/datasets/main/atherosclerosis.db",
+      "context": "The dataset contains data on individuals who participated in the Atherosclerosis study. It includes information on their demographics, medical history, and various health-related measurements over a 20-year period.",
+      "questions": [
+        "What is the average weight (VAHA) of individuals with diabetes (DIABET)?",
+        "How many individuals have a history of hypertension (HYPERT) and also smoke (KOURENI)?",
+        "What are the most common causes of death (PRICUMR) recorded in the Death table?",
+        "What is the trend of cholesterol levels (CHLST) over the years for individuals with a specific condition (NEMOC1) in the Letter table?",
+        "How does the average systolic blood pressure (SYST1) compare between individuals with and without a history of heart disease (SRDCE)?"
+      ]
+    },
+    {
+      "title": "Card Transactions",
+      "body": "Card transactions data with details on issuer country, transaction amount, and other details.",
+      "file": "https://raw.githubusercontent.com/gramener/datasets/main/card_transactions.csv",
+      "questions": [
+        "What is the total amount of transactions for each issuer country?",
+        "How many transactions were declined, and what are the most common decline reason codes?",
+        "What percentage of transactions were flagged as fraud, and how does this vary by industry segment?",
+        "Which channel has the highest number of successful transactions, and what is the average transaction amount for that channel?",
+        "What is the distribution of transaction types (e.g., purchase, refund) across different issuer regions?"
+      ]
+    },
+    {
+      "title": "HR: Employee Data",
+      "body": "Employee master data with demographics, job details, hierarchy, salary, performance, and other details.",
+      "file": "https://raw.githubusercontent.com/gramener/datasets/main/employee_data.csv",
+      "questions": [
+        "Which departments have the highest average salary and how many employees work in each?",
+        "What is the average time between hire and termination?",
+        "Which department has the highest performance, i.e. with a performance rating of 4 or above?",
+        "Which departments has the best gender balance and how many male & female employees work in each?",
+        "Who are the employees hired most recently, and what are their job titles?"
+      ]
+    },
+    {
+      "title": "Marvel Powers",
+      "body": "Every Marvel character and variant along with their powers (at their weakest and strongest) from Marvel Fandom.",
+      "file": "https://raw.githubusercontent.com/sanand0/marvel-powers/master/marvel-powers-summary.csv",
+      "questions": [
+        "List the powers of the top 10 characters by total power",
+        "What is the character with the highest maximum strength?",
+        "Which characters are the smartest?",
+        "How many characters have a minimum durability score greater than 50?",
+        "What is the average maximum speed of all characters listed?",
+        "Which character has the widest range between minimum and maximum energy projection?"
+      ]
+    },
+    {
+      "title": "Product Financial Performance",
+      "body": "A comprehensive overview of the financial performance of various products over a multi-year period.",
+      "file": "VW_IQ_CHARACTERISTICS_HISTORICAL_RESULT_V01.csv",
+      "questions": [
+        "What is the trend of the product sales for 'PRODUCT_NAME' over the last 12 months?",
+        "How do the sales figures for 'PRODUCT_CODE' compare between January 2023 and January 2024?",
+        "What is the average monthly sales for each product in the year 2022?",
+        "Which entity had the highest sales for 'PRODUCT_NAME' in the last quarter of 2023?",
+        "Which product had the highest sales in the month of December 2023?"
+      ]
+    },
+    {
+      "title": "Financial Fund Performance Metrics",
+      "body": "A comprehensive collection of financial metrics and performance indicators for various investment funds.",
+      "file": "VW_IQ_CHARACTERISTICS_RESULT_V01.csv",
+      "questions": [
+        "What is the average dividend yield for products of type 'Equity' in the dataset?",
+        "Which product has the highest assets under management (AUM) in USD?",
+        "How does the current yield of the top 5 products by market capitalization compare to the benchmark?",
+        "What is the trend of earnings per share growth rate over the last 5 years for products in the 'Debt' category?",
+        "Which products have a price-to-earnings ratio lower than the benchmark's price-to-earnings ratio?"
+      ]
+    },
+    {
+      "title": "Global Financial Product Share Class",
+      "body": "Information about various share classes associated with financial products across multiple countries.",
+      "file": "VW_IQ_COUNTRIES_OF_REGISTRATION_RESULT_V01.csv",
+      "questions": [
+        "What is the total number of live share classes available for each product type?",
+        "Which countries have the highest number of registered products, and how many products are registered in each?",
+        "What are the different share class names available for a specific product code?",
+        "How many products have been deregistered in each country, and what are their deregistration dates?",
+        "What is the average launch date of share classes for each share class currency?"
+      ]
+    },
+    {
+      "title": "Product Financial Performance 2",
+      "body": "A comprehensive overview of the financial metrics associated with various products over a specified time period.",
+      "file": "VW_IQ_HOLDINGS_BREAKDOWNS_HISTORICAL_RESULT_V01.csv",
+      "questions": [
+        "What was the total value of a specific product (e.g., PRODUCT_CODE) across all available dates in the dataset?",
+        "How has the portfolio breakdown for a specific product changed over the last year (e.g., comparing values from 12/31/2023 to 12/31/2022)?",
+        "Which portfolio level (e.g., PORTFOLIO_LEVEL1_DESCRIPTION) had the highest average value over the last two years?",
+        "What are the top 5 products with the highest value on a specific date (e.g., 12/31/2023)?",
+        "How do the values for a specific product (e.g., PRODUCT_NAME) compare month-over-month for the last six months?"
+      ]
+    },
+    {
+      "title": "Portfolio Exposure and Performance",
+      "body": "A comprehensive overview of various financial products and their associated metrics within investment portfolios.",
+      "file": "VW_IQ_HOLDINGS_BREAKDOWNS_RESULT_V01.csv",
+      "questions": [
+        "What is the average weight percentage of each product type in the portfolio?",
+        "How many unique product codes are present in the dataset?",
+        "What is the total portfolio value for each product name as of the latest date?",
+        "Which product has the highest portfolio rank and what is its corresponding portfolio breakdown description?",
+        "What is the distribution of portfolio level 1 descriptions across different product types?"
+      ]
+    },
+    {
+      "title": "Portfolio Management",
+      "body": "An overview of various portfolios within a financial or investment management context.",
+      "file": "VW_IQ_PORTFOLIO_ENTITY_RESULT_V01.csv",
+      "questions": [
+        "What are the distinct portfolio types available in the dataset?",
+        "How many portfolios were active as of a specific date?",
+        "What is the average number of portfolios per product code?",
+        "Which portfolio has the longest name and what is that name?",
+        "What is the status description of portfolios that are currently inactive?"
+      ]
+    },
+    {
+      "title": "Comprehensive Fund Product",
+      "body": "Information about various financial fund products, capturing a wide array of attributes.",
+      "file": "VW_IQ_PRODUCT_ENTITY_RESULT_V01.csv",
+      "questions": [
+        "What are the top 5 products by gross AUM in USD?",
+        "Which products have a performance valuation frequency of 'Daily'?",
+        "What is the average recommended holding period in years for products categorized under 'Equity'?",
+        "How many products are currently active and have a domicile in the 'United States'?",
+        "What are the different business status descriptions available in the dataset?"
+      ]
+    },
+    {
+      "title": "Financial Portfolio Holdings",
+      "body": "A comprehensive overview of various financial instruments held within investment portfolios.",
+      "file": "VW_IQ_PRODUCT_HOLDINGS_RESULT_V01.csv",
+      "questions": [
+        "What is the total market value of holdings for each product type on a specific date?",
+        "Which products have the highest unrealized gain or loss in the portfolio?",
+        "How does the exposure to different currencies vary across different portfolios?",
+        "What is the average quantity of shares held for each security in the dataset?",
+        "Which countries have the highest percentage of equity in their respective portfolios?"
+      ]
+    },
+    {
+      "title": "Investment Fund Performance and Characteristics",
+      "body": "Information on various investment funds, detailing their performance metrics, characteristics, and identifiers.",
+      "file": "VW_IQ_PRODUCT_PERFORMANCE_AND_AUM_RESULT_V01.csv",
+      "questions": [
+        "What is the average return over the last 5 years for each product?",
+        "Which product has the highest AUM (Assets Under Management) as of the latest date available?",
+        "How do the 1-month cumulative returns compare across different share classes of a specific product?",
+        "What is the performance trend (cumulative returns) of a specific product over the last 10 years?",
+        "Which products have been launched in the last 2 years and what are their respective return rates since inception?"
+      ]
+    },
+    {
+      "title": "Product Investment",
+      "body": "A comprehensive collection of information related to various financial products, primarily focusing on investment funds.",
+      "file": "VW_IQ_PRODUCT_SHARECLASS_MARKETING_CHANNEL_RESULT_V01.csv",
+      "questions": [
+        "What are the active products available in a specific country and their corresponding marketing channels?",
+        "How many products belong to each asset class and what are their fund objectives?",
+        "What is the distribution of products by their ESG category and how does it relate to their business status?",
+        "Which investment benchmarks are associated with products launched after a specific date, and what are their reporting names?",
+        "What are the different share classes available for a specific product and their corresponding ISIN codes?"
+      ]
+    },
+    {
+      "title": "Investment Product Performance",
+      "body": "A comprehensive overview of various investment products, detailing their performance metrics over time.",
+      "file": "VW_IQ_RISK_STATS_HISTORICAL_RESULT_V01.csv",
+      "questions": [
+        "What was the average return for each product type over the last year?",
+        "Which product code had the highest outperformance compared to its benchmark in the last quarter?",
+        "How has the business status of different share classes changed over the past two years?",
+        "What is the trend of returns for a specific product code over the last five years?",
+        "Which characteristic is associated with the highest returns for the products listed in the dataset?"
+      ]
+    },
+    {
+      "title": "Investment Product Performance 2",
+      "body": "Information about various investment products, including their characteristics, performance metrics, and associated benchmarks.",
+      "file": "VW_IQ_RISK_STATS_RESULT_V01.csv",
+      "questions": [
+        "What is the average portfolio value for each product type as of the latest valuation date?",
+        "How does the performance of each share class compare to its benchmark over the last year?",
+        "Which product code has the highest outperformance type in the dataset?",
+        "What are the unique characteristics associated with each share class name?",
+        "How many different benchmark names are associated with each product type?"
+      ]
+    },
+    {
+      "title": "Fund Share Class Information",
+      "body": "A comprehensive collection of data pertaining to various share classes of investment funds.",
+      "file": "VW_IQ_SHARE_CLASS_RESULT_V01.csv",
+      "questions": [
+        "What is the average annual management charge for each share class type?",
+        "Which share classes have the highest ongoing charge figure and what are their respective product names?",
+        "How many share classes were launched in a specific year and what are their names?",
+        "What are the different distribution types available for share classes and how many share classes fall under each type?",
+        "Which share classes have a performance fee and what are their associated product codes?"
+      ]
+    },
+    {
+      "title": "Financial Security Share Class",
+      "body": "Information about various share classes of financial securities, capturing essential attributes that are critical for investment analysis and reporting.",
+      "file": "VW_IQ_SHARE_CLASS_VALUATION_FACT_V01.csv",
+      "questions": [
+        "What is the average confirmed NAV price local for each share class type?",
+        "How many share classes have a total expense ratio greater than 1%?",
+        "What is the distribution of share class types in the dataset?",
+        "Which share class has the highest single price movement percentage over the recorded dates?",
+        "What are the confirmed distribution yields for share classes with a specific ISIN?"
+      ]
+    }
+  ]
+}

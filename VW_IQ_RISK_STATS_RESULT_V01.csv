@@ -1,0 +1,11 @@
+﻿PPRODUCT_TYPE,PRODUCT_CODE,SHARE_CLASS_NAME,AS_OF_DATE,INC_DATE,CHARACTERISTIC,PORTFOLIO,BENCHMARK,BENCHMARK_NAME,REP_SHARE_CLASS,REP_ACCT_IND,INVSERIES_SHARECLASS_ID,VALUATION_DATE,DATE_KEY,RETURN_SUBTYPE,OUTPERFORMANCE_TYPE,COLUMN_ORDER
+ABCD,APGRWTH,Asia Equity Growth,2020-05-31,1995-01-01,Standard Deviation (Since Incep),23.13,21.11,Benchmark - All Asia,,1,,5/31/2020,20200531,Gross,,-3004
+ABCD,APGRWTH,Asia Equity Growth,2020-05-31,1995-01-01,Standard Deviation (Since Incep),23.13,21.11,Benchmark - All Asia,,1,,5/31/2020,20200531,Gross,Arithmetic,-3004
+XYZA,EUGRWTH,Europe Equity Growth,2020-05-31,1995-01-01,Standard Deviation (Since Incep),20.13,3.0,Benchmark - All Europe,,1,,5/31/2020,20200531,Gross,Arithmetic,-3004
+XYZA,EUGRWTH,Europe Equity Growth,2020-05-31,1995-01-01,Standard Deviation (Since Incep),20.13,3.0,Benchmark - All Europe,,1,,5/31/2020,20200531,Gross,Arithmetic,-3004
+XYZA,EUGRWTH,Europe Equity Growth,2020-06-30,1995-01-01,Standard Deviation (Since Incep),20.13,3.0,Benchmark - All Europe,,1,,5/31/2020,20200531,Gross,Arithmetic,-3004
+XYZA,EUGRWTH,Europe Equity Growth,2020-07-01,1995-01-01,Standard Deviation (Since Incep),20.13,3.0,Benchmark - All Europe,,1,,5/31/2020,20200531,Gross,Arithmetic,-3004
+XYZA,EUGRWTH,Europe Equity Growth,2020-05-31,1995-01-01,Standard Deviation (Since Incep),20.13,3.0,Benchmark - All Europe,,1,,5/31/2020,20200531,Gross,Arithmetic,-3004
+HIJK,USGRWTH,US Equity Growth,2020-05-31,1995-01-01,Standard Deviation (Since Incep),10.0,12.0,Benchmark - All US,,1,,5/31/2020,20200531,Gross,Arithmetic,-3004
+HIJK,USGRWTH,US Equity Growth,2020-05-06,1995-01-01,Standard Deviation (Since Incep),10.0,12.0,Benchmark - All US,,1,,5/31/2020,20200531,Gross,Arithmetic,-3004
+HIJK,USGRWTH,US Equity Growth,2020-05-06,1995-01-01,Standard Deviation (Since Incep),10.0,12.0,Benchmark - All US,,1,,5/31/2020,20200531,Gross,Arithmetic,-3004
