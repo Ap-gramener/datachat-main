@@ -87,171 +87,23 @@
       ]
     },
     {
-      "title": "Product Financial Performance",
-      "body": "A comprehensive overview of the financial performance of various products over a multi-year period.",
+      "title": "Financial and Investment Analysis",
+      "body": "Dataset for analyzing various aspects of financial and investment portfolios, essential for financial analysts, portfolio managers, and investment professionals seeking to gain insights into investment characteristics, performance, and risk management.",
       "file": "VW_IQ_CHARACTERISTICS_HISTORICAL_RESULT_V01.csv",
-      "questions": [
-        "What is the trend of the product sales for 'PRODUCT_NAME' over the last 12 months?",
-        "How do the sales figures for 'PRODUCT_CODE' compare between January 2023 and January 2024?",
-        "What is the average monthly sales for each product in the year 2022?",
-        "Which entity had the highest sales for 'PRODUCT_NAME' in the last quarter of 2023?",
-        "Which product had the highest sales in the month of December 2023?"
-      ]
-    },
-    {
-      "title": "Financial Fund Performance Metrics",
-      "body": "A comprehensive collection of financial metrics and performance indicators for various investment funds.",
-      "file": "VW_IQ_CHARACTERISTICS_RESULT_V01.csv",
-      "questions": [
-        "What is the average dividend yield for products of type 'Equity' in the dataset?",
-        "Which product has the highest assets under management (AUM) in USD?",
-        "How does the current yield of the top 5 products by market capitalization compare to the benchmark?",
-        "What is the trend of earnings per share growth rate over the last 5 years for products in the 'Debt' category?",
-        "Which products have a price-to-earnings ratio lower than the benchmark's price-to-earnings ratio?"
-      ]
-    },
-    {
-      "title": "Global Financial Product Share Class",
-      "body": "Information about various share classes associated with financial products across multiple countries.",
-      "file": "VW_IQ_COUNTRIES_OF_REGISTRATION_RESULT_V01.csv",
-      "questions": [
-        "What is the total number of live share classes available for each product type?",
-        "Which countries have the highest number of registered products, and how many products are registered in each?",
-        "What are the different share class names available for a specific product code?",
-        "How many products have been deregistered in each country, and what are their deregistration dates?",
-        "What is the average launch date of share classes for each share class currency?"
-      ]
-    },
-    {
-      "title": "Product Financial Performance 2",
-      "body": "A comprehensive overview of the financial metrics associated with various products over a specified time period.",
-      "file": "VW_IQ_HOLDINGS_BREAKDOWNS_HISTORICAL_RESULT_V01.csv",
-      "questions": [
-        "What was the total value of a specific product (e.g., PRODUCT_CODE) across all available dates in the dataset?",
-        "How has the portfolio breakdown for a specific product changed over the last year (e.g., comparing values from 12/31/2023 to 12/31/2022)?",
-        "Which portfolio level (e.g., PORTFOLIO_LEVEL1_DESCRIPTION) had the highest average value over the last two years?",
-        "What are the top 5 products with the highest value on a specific date (e.g., 12/31/2023)?",
-        "How do the values for a specific product (e.g., PRODUCT_NAME) compare month-over-month for the last six months?"
-      ]
-    },
-    {
-      "title": "Portfolio Exposure and Performance",
-      "body": "A comprehensive overview of various financial products and their associated metrics within investment portfolios.",
-      "file": "VW_IQ_HOLDINGS_BREAKDOWNS_RESULT_V01.csv",
-      "questions": [
-        "What is the average weight percentage of each product type in the portfolio?",
-        "How many unique product codes are present in the dataset?",
-        "What is the total portfolio value for each product name as of the latest date?",
-        "Which product has the highest portfolio rank and what is its corresponding portfolio breakdown description?",
-        "What is the distribution of portfolio level 1 descriptions across different product types?"
-      ]
-    },
-    {
-      "title": "Portfolio Management",
-      "body": "An overview of various portfolios within a financial or investment management context.",
-      "file": "VW_IQ_PORTFOLIO_ENTITY_RESULT_V01.csv",
-      "questions": [
-        "What are the distinct portfolio types available in the dataset?",
-        "How many portfolios were active as of a specific date?",
-        "What is the average number of portfolios per product code?",
-        "Which portfolio has the longest name and what is that name?",
-        "What is the status description of portfolios that are currently inactive?"
-      ]
-    },
-    {
-      "title": "Comprehensive Fund Product",
-      "body": "Information about various financial fund products, capturing a wide array of attributes.",
-      "file": "VW_IQ_PRODUCT_ENTITY_RESULT_V01.csv",
-      "questions": [
-        "What are the top 5 products by gross AUM in USD?",
-        "Which products have a performance valuation frequency of 'Daily'?",
-        "What is the average recommended holding period in years for products categorized under 'Equity'?",
-        "How many products are currently active and have a domicile in the 'United States'?",
-        "What are the different business status descriptions available in the dataset?"
-      ]
-    },
-    {
-      "title": "Financial Portfolio Holdings",
-      "body": "A comprehensive overview of various financial instruments held within investment portfolios.",
-      "file": "VW_IQ_PRODUCT_HOLDINGS_RESULT_V01.csv",
-      "questions": [
-        "What is the total market value of holdings for each product type on a specific date?",
-        "Which products have the highest unrealized gain or loss in the portfolio?",
-        "How does the exposure to different currencies vary across different portfolios?",
-        "What is the average quantity of shares held for each security in the dataset?",
-        "Which countries have the highest percentage of equity in their respective portfolios?"
-      ]
-    },
-    {
-      "title": "Investment Fund Performance and Characteristics",
-      "body": "Information on various investment funds, detailing their performance metrics, characteristics, and identifiers.",
-      "file": "VW_IQ_PRODUCT_PERFORMANCE_AND_AUM_RESULT_V01.csv",
-      "questions": [
-        "What is the average return over the last 5 years for each product?",
-        "Which product has the highest AUM (Assets Under Management) as of the latest date available?",
-        "How do the 1-month cumulative returns compare across different share classes of a specific product?",
-        "What is the performance trend (cumulative returns) of a specific product over the last 10 years?",
-        "Which products have been launched in the last 2 years and what are their respective return rates since inception?"
-      ]
-    },
-    {
-      "title": "Product Investment",
-      "body": "A comprehensive collection of information related to various financial products, primarily focusing on investment funds.",
-      "file": "VW_IQ_PRODUCT_SHARECLASS_MARKETING_CHANNEL_RESULT_V01.csv",
-      "questions": [
-        "What are the active products available in a specific country and their corresponding marketing channels?",
-        "How many products belong to each asset class and what are their fund objectives?",
-        "What is the distribution of products by their ESG category and how does it relate to their business status?",
-        "Which investment benchmarks are associated with products launched after a specific date, and what are their reporting names?",
-        "What are the different share classes available for a specific product and their corresponding ISIN codes?"
-      ]
-    },
-    {
-      "title": "Investment Product Performance",
-      "body": "A comprehensive overview of various investment products, detailing their performance metrics over time.",
-      "file": "VW_IQ_RISK_STATS_HISTORICAL_RESULT_V01.csv",
-      "questions": [
-        "What was the average return for each product type over the last year?",
-        "Which product code had the highest outperformance compared to its benchmark in the last quarter?",
-        "How has the business status of different share classes changed over the past two years?",
-        "What is the trend of returns for a specific product code over the last five years?",
-        "Which characteristic is associated with the highest returns for the products listed in the dataset?"
-      ]
-    },
-    {
-      "title": "Investment Product Performance 2",
-      "body": "Information about various investment products, including their characteristics, performance metrics, and associated benchmarks.",
-      "file": "VW_IQ_RISK_STATS_RESULT_V01.csv",
-      "questions": [
-        "What is the average portfolio value for each product type as of the latest valuation date?",
-        "How does the performance of each share class compare to its benchmark over the last year?",
-        "Which product code has the highest outperformance type in the dataset?",
-        "What are the unique characteristics associated with each share class name?",
-        "How many different benchmark names are associated with each product type?"
-      ]
-    },
-    {
-      "title": "Fund Share Class Information",
-      "body": "A comprehensive collection of data pertaining to various share classes of investment funds.",
-      "file": "VW_IQ_SHARE_CLASS_RESULT_V01.csv",
-      "questions": [
-        "What is the average annual management charge for each share class type?",
-        "Which share classes have the highest ongoing charge figure and what are their respective product names?",
-        "How many share classes were launched in a specific year and what are their names?",
-        "What are the different distribution types available for share classes and how many share classes fall under each type?",
-        "Which share classes have a performance fee and what are their associated product codes?"
-      ]
-    },
-    {
-      "title": "Financial Security Share Class",
-      "body": "Information about various share classes of financial securities, capturing essential attributes that are critical for investment analysis and reporting.",
-      "file": "VW_IQ_SHARE_CLASS_VALUATION_FACT_V01.csv",
-      "questions": [
-        "What is the average confirmed NAV price local for each share class type?",
-        "How many share classes have a total expense ratio greater than 1%?",
-        "What is the distribution of share class types in the dataset?",
-        "Which share class has the highest single price movement percentage over the recorded dates?",
-        "What are the confirmed distribution yields for share classes with a specific ISIN?"
+      "additionalFiles": [
+        "VW_IQ_CHARACTERISTICS_RESULT_V01.csv",
+        "VW_IQ_COUNTRIES_OF_REGISTRATION_RESULT_V01.csv",
+        "VW_IQ_HOLDINGS_BREAKDOWNS_HISTORICAL_RESULT_V01.csv",
+        "VW_IQ_HOLDINGS_BREAKDOWNS_RESULT_V01.csv",
+        "VW_IQ_PORTFOLIO_ENTITY_RESULT_V01.csv",
+        "VW_IQ_PRODUCT_ENTITY_RESULT_V01.csv",
+        "VW_IQ_PRODUCT_HOLDINGS_RESULT_V01.csv",
+        "VW_IQ_PRODUCT_PERFORMANCE_AND_AUM_RESULT_V01.csv",
+        "VW_IQ_PRODUCT_SHARECLASS_MARKETING_CHANNEL_RESULT_V01.csv",
+        "VW_IQ_RISK_STATS_HISTORICAL_RESULT_V01.csv",
+        "VW_IQ_RISK_STATS_RESULT_V01.csv",
+        "VW_IQ_SHARE_CLASS_RESULT_V01.csv",
+        "VW_IQ_SHARE_CLASS_VALUATION_FACT_V01.csv"
       ]
     }
   ]

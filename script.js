@@ -83,13 +83,14 @@ fetch("config.json")
     $demos.innerHTML = "";
     render(
       demos.map(
-        ({ title, body, file, context, questions }) =>
+        ({ title, body, file, context, questions, additionalFiles }) =>
           html` <div class="col py-3">
             <a
               class="demo card h-100 text-decoration-none"
               href="${file}"
               data-questions=${JSON.stringify(questions ?? [])}
               data-context=${JSON.stringify(context ?? "")}
+              data-additional-files=${JSON.stringify(additionalFiles ?? [])}
             >
               <div class="card-body">
                 <h5 class="card-title">${title}</h5>
@@ -107,8 +108,25 @@ $demos.addEventListener("click", async (e) => {
   if ($demo) {
     e.preventDefault();
     const file = $demo.getAttribute("href");
+    const additionalFiles = JSON.parse($demo.dataset.additionalFiles || '[]');
+
     render(html`<div class="text-center my-3">${loading}</div>`, $tablesContainer);
+
+    // Upload main file
     await DB.upload(new File([await fetch(file).then((r) => r.blob())], file.split("/").pop()));
+
+    // Upload additional files if they exist
+    if (additionalFiles.length > 0) {
+      for (const additionalFile of additionalFiles) {
+        try {
+          const fileContent = await fetch(additionalFile).then((r) => r.blob());
+          await DB.upload(new File([fileContent], additionalFile.split("/").pop()));
+        } catch (error) {
+          console.error(`Error uploading additional file ${additionalFile}:`, error);
+        }
+      }
+    }
+
     const questions = JSON.parse($demo.dataset.questions);
     if (questions.length) {
       DB.questionInfo.schema = JSON.stringify(DB.schema());
@@ -263,7 +281,7 @@ async function drawTables() {
   const tables = html`
     <div class="accordion narrative mx-auto" id="table-accordion" style="--bs-accordion-btn-padding-y: 0.5rem">
       ${schema.map(
-        ({ name, sql, columns }) => html`
+    ({ name, sql, columns }) => html`
           <div class="accordion-item">
             <h2 class="accordion-header">
               <button
@@ -294,7 +312,7 @@ async function drawTables() {
                   </thead>
                   <tbody>
                     ${columns.map(
-                      (column) => html`
+      (column) => html`
                         <tr>
                           <td>${column.name}</td>
                           <td>${column.type}</td>
@@ -303,7 +321,7 @@ async function drawTables() {
                           <td>${column.pk ? "Yes" : "No"}</td>
                         </tr>
                       `,
-                    )}
+    )}
                   </tbody>
                 </table>
               </div>
@@ -311,7 +329,7 @@ async function drawTables() {
           </div>
         </div>
       `,
-      )}
+  )}
     </div>
   `;
 
@@ -380,8 +398,8 @@ ${DB.context}
 This is their SQLite schema:
 
 ${DB.schema()
-  .map(({ sql }) => sql)
-  .join("\n\n")}
+        .map(({ sql }) => sql)
+        .join("\n\n")}
 
 Answer the user's question following these steps:
 
@@ -489,12 +507,12 @@ function renderTable(data) {
       </thead>
       <tbody>
         ${data.map(
-          (row) => html`
+    (row) => html`
             <tr>
               ${columns.map((col) => html`<td>${row[col]}</td>`)}
             </tr>
           `,
-        )}
+  )}
       </tbody>
     </table>
   `;
