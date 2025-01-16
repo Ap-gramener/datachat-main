@@ -74,46 +74,82 @@ render(
   $upload,
 );
 
-// --------------------------------------------------------------------
-// Render demos
+// async function uploadFiles(demos) {
+//   for (const demo of demos) {
+//     const file = demo.file;
+//     const additionalFiles = demo.additionalFiles || [];
 
-fetch("config.json")
-  .then((r) => r.json())
-  .then(({ demos }) => {
-    $demos.innerHTML = "";
-    render(
-      demos.map(
-        ({ title, body, file, context, questions, additionalFiles }) =>
-          html` <div class="col py-3">
-            <a
-              class="demo card h-100 text-decoration-none"
-              href="${file}"
-              data-questions=${JSON.stringify(questions ?? [])}
-              data-context=${JSON.stringify(context ?? "")}
-              data-additional-files=${JSON.stringify(additionalFiles ?? [])}
-            >
-              <div class="card-body">
-                <h5 class="card-title">${title}</h5>
-                <p class="card-text">${body}</p>
-              </div>
-            </a>
-          </div>`,
-      ),
-      $demos,
-    );
-  });
+//     // Upload main file
+//     try {
+//       const mainFileContent = await fetch(file).then((r) => r.blob());
+//       await DB.upload(new File([mainFileContent], file.split("/").pop()));
+//     } catch (error) {
+//       console.error(`Error uploading main file ${file}:`, error);
+//     }
 
-$demos.addEventListener("click", async (e) => {
-  const $demo = e.target.closest(".demo");
-  if ($demo) {
-    e.preventDefault();
-    const file = $demo.getAttribute("href");
-    const additionalFiles = JSON.parse($demo.dataset.additionalFiles || '[]');
+//     // Upload additional files if they exist
+//     if (additionalFiles.length > 0) {
+//       for (const additionalFile of additionalFiles) {
+//         try {
+//           const fileContent = await fetch(additionalFile).then((r) => r.blob());
+//           await DB.upload(new File([fileContent], additionalFile.split("/").pop()));
+//         } catch (error) {
+//           console.error(`Error uploading additional file ${additionalFile}:`, error);
+//         }
+//       }
+//     }
 
-    render(html`<div class="text-center my-3">${loading}</div>`, $tablesContainer);
+//     // Handle questions and context if they exist
+//     if (demo.questions && demo.questions.length) {
+//       DB.questionInfo.schema = JSON.stringify(DB.schema());
+//       DB.questionInfo.questions = demo.questions;
+//     }
+//     if (demo.context) {
+//       DB.context = demo.context;
+//     }
+//   }
+//   drawTables();
+// }
+
+// fetch("config.json")
+//   .then((r) => r.json())
+//   .then(async ({ demos }) => {
+//     // Render the demos in the UI
+//     $demos.innerHTML = "";
+//     render(
+//       demos.map(
+//         ({ title, body, file, context, questions, additionalFiles }) =>
+//           html` <div class="col py-3">
+//             <div class="demo card h-100">
+//               <div class="card-body">
+//                 <h5 class="card-title">${title}</h5>
+//                 <p class="card-text">${body}</p>
+//               </div>
+//             </div>
+//           </div>`,
+//       ),
+//       $demos,
+//     );
+
+//     // Show loading indicator
+//     render(html`<div class="text-center my-3">${loading}</div>`, $tablesContainer);
+
+//     // Automatically upload files
+//     await uploadFiles(demos);
+//   });
+
+async function uploadFiles(demos) {
+  for (const demo of demos) {
+    const file = demo.file;
+    const additionalFiles = demo.additionalFiles || [];
 
     // Upload main file
-    await DB.upload(new File([await fetch(file).then((r) => r.blob())], file.split("/").pop()));
+    try {
+      const mainFileContent = await fetch(file).then((r) => r.blob());
+      await DB.upload(new File([mainFileContent], file.split("/").pop()));
+    } catch (error) {
+      console.error(`Error uploading main file ${file}:`, error);
+    }
 
     // Upload additional files if they exist
     if (additionalFiles.length > 0) {
@@ -127,15 +163,87 @@ $demos.addEventListener("click", async (e) => {
       }
     }
 
-    const questions = JSON.parse($demo.dataset.questions);
-    if (questions.length) {
+    // Handle questions and context if they exist
+    if (demo.questions && demo.questions.length) {
       DB.questionInfo.schema = JSON.stringify(DB.schema());
-      DB.questionInfo.questions = questions;
+      DB.questionInfo.questions = demo.questions;
     }
-    DB.context = JSON.parse($demo.dataset.context);
-    drawTables();
+    if (demo.context) {
+      DB.context = demo.context;
+    }
   }
-});
+  drawTables();
+}
+
+fetch("config.json")
+  .then((r) => r.json())
+  .then(async ({ demos }) => {
+    // Automatically upload files
+    await uploadFiles(demos);
+  });
+
+// --------------------------------------------------------------------
+// Render demos
+
+// fetch("config.json")
+//   .then((r) => r.json())
+//   .then(async ({ demos }) => {
+//     $demos.innerHTML = "";
+//     render(
+//       demos.map(
+//         ({ title, body, file, context, questions, additionalFiles }) =>
+//           html` <div class="col py-3">
+//             <a
+//               class="demo card h-100 text-decoration-none"
+//               href="${file}"
+//               data-questions=${JSON.stringify(questions ?? [])}
+//               data-context=${JSON.stringify(context ?? "")}
+//               data-additional-files=${JSON.stringify(additionalFiles ?? [])}
+//             >
+//               <div class="card-body">
+//                 <h5 class="card-title">${title}</h5>
+//                 <p class="card-text">${body}</p>
+//               </div>
+//             </a>
+//           </div>`,
+//       ),
+//       $demos,
+//     );
+//   });
+
+// $demos.addEventListener("click", async (e) => {
+//   const $demo = e.target.closest(".demo");
+//   if ($demo) {
+//     e.preventDefault();
+//     const file = $demo.getAttribute("href");
+//     const additionalFiles = JSON.parse($demo.dataset.additionalFiles || '[]');
+
+//     render(html`<div class="text-center my-3">${loading}</div>`, $tablesContainer);
+
+//     // Upload main file
+//     await DB.upload(new File([await fetch(file).then((r) => r.blob())], file.split("/").pop()));
+
+//     // Upload additional files if they exist
+//     if (additionalFiles.length > 0) {
+//       for (const additionalFile of additionalFiles) {
+//         try {
+//           const fileContent = await fetch(additionalFile).then((r) => r.blob());
+//           await DB.upload(new File([fileContent], additionalFile.split("/").pop()));
+//         } catch (error) {
+//           console.error(`Error uploading additional file ${additionalFile}:`, error);
+//         }
+//       }
+//     }
+
+//     const questions = JSON.parse($demo.dataset.questions);
+//     if (questions.length) {
+//       DB.questionInfo.schema = JSON.stringify(DB.schema());
+//       DB.questionInfo.questions = questions;
+//     }
+//     DB.context = JSON.parse($demo.dataset.context);
+//     drawTables();
+//   }
+// });
 
 // --------------------------------------------------------------------
 // Manage database tables
